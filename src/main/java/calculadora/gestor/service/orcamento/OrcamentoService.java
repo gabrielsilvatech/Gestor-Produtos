@@ -1,5 +1,6 @@
 package calculadora.gestor.service.orcamento;
 
+import calculadora.gestor.infraestrutura.exception.ValidacaoException;
 import calculadora.gestor.produto.DadosOrcamentoProduto;
 import calculadora.gestor.produto.Produto;
 import calculadora.gestor.repository.ProdutoRepository;
@@ -30,14 +31,16 @@ public class OrcamentoService {
 
             Produto produto = produtoRepository.findById(idProduto).orElse(null);
 
-            if (produto != null) {
-                BigDecimal valorProduto = produto.getValor();
-                BigDecimal subTotal = valorProduto.multiply(BigDecimal.valueOf(quantidade));
-                total = total.add(subTotal);
-
-                var detalhesProduto = new DadosListagemOrcamentoProduto(produto.getId(),quantidade,produto.getValor(), subTotal);
-                listaProdutos.add(detalhesProduto);
+            if (produto == null) {
+                throw new ValidacaoException("Produto não existe");
             }
+
+            BigDecimal valorProduto = produto.getValor();
+            BigDecimal subTotal = valorProduto.multiply(BigDecimal.valueOf(quantidade));
+            total = total.add(subTotal);
+
+            var detalhesProduto = new DadosListagemOrcamentoProduto(produto.getId(),quantidade,produto.getValor(), subTotal);
+            listaProdutos.add(detalhesProduto);
 
         }
 
