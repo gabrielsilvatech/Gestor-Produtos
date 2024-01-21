@@ -1,7 +1,4 @@
-package calculadora.gestor.produto;
-
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+package calculadora.gestor.domain.produto;
 
 import java.math.BigDecimal;
 

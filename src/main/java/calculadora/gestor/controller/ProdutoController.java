@@ -1,6 +1,6 @@
 package calculadora.gestor.controller;
 
-import calculadora.gestor.produto.*;
+import calculadora.gestor.domain.produto.*;
 import calculadora.gestor.repository.ProdutoRepository;
 import calculadora.gestor.service.orcamento.OrcamentoService;
 import calculadora.gestor.service.produto.ProdutoService;

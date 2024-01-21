@@ -1,8 +1,7 @@
 package calculadora.gestor.service.produto;
 
 import calculadora.gestor.infraestrutura.exception.ValidacaoException;
-import calculadora.gestor.produto.DadosAtualizacaoProduto;
-import calculadora.gestor.produto.Produto;
+import calculadora.gestor.domain.produto.DadosAtualizacaoProduto;
 import calculadora.gestor.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

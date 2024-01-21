@@ -1,4 +1,4 @@
-package calculadora.gestor.produto;
+package calculadora.gestor.domain.produto;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

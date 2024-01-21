@@ -1,4 +1,4 @@
-package calculadora.gestor.produto;
+package calculadora.gestor.domain.produto;
 
 import java.math.BigDecimal;
 

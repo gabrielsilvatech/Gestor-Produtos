@@ -1,8 +1,8 @@
 package calculadora.gestor.service.orcamento;
 
 import calculadora.gestor.infraestrutura.exception.ValidacaoException;
-import calculadora.gestor.produto.DadosOrcamentoProduto;
-import calculadora.gestor.produto.Produto;
+import calculadora.gestor.domain.produto.DadosOrcamentoProduto;
+import calculadora.gestor.domain.produto.Produto;
 import calculadora.gestor.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
